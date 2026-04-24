@@ -33,13 +33,14 @@
 
         public List<Transaction> GetPending() => _pending;
 
-        public bool Verify()
-{
-    if (_blockchain.HeadBlock == null) return true;
+        public bool Verify() => Verify(out _); 
 
-
-    return _blockchain.HeadBlock.IsValidChain(null, true); // ← đổi verbose=true
-}
+        public bool Verify(out List<string> errors)
+        {
+            errors = new List<string>();
+            if (_blockchain.HeadBlock == null) return true;
+            return _blockchain.HeadBlock.IsValidChain(null, true, errors);
+        }
 
         public void Save() => FileManager.SaveBlockchain(_blockchain);
     }

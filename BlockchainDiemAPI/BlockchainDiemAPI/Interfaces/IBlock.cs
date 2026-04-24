@@ -19,6 +19,6 @@ namespace BlockchainDiemAPI.Interfaces
         string CalculateBlockHash(string previousBlockHash);
         void SetBlockHash(IBlock parent);
         IBlock NextBlock { get; set; }
-        bool IsValidChain(string prevBlockHash, bool verbose);
+        bool IsValidChain(string prevBlockHash, bool verbose, List<string> errors = null);
     }
 }

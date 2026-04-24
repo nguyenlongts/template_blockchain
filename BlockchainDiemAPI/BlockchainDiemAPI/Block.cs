@@ -76,29 +76,40 @@ public class Block : IBlock
         merkleTree.BuildTree();
     }
 
-    public bool IsValidChain(string prevBlockHash, bool verbose)
-{
-    bool isValid = true;
-    BuildMerkleTree();
-
-    string newBlockHash = CalculateBlockHash(prevBlockHash);
-
-    if (newBlockHash != BlockHash)
+    public bool IsValidChain(string prevBlockHash, bool verbose, List<string> errors = null)
     {
-        isValid = false;
+        bool isValid = true;
+        BuildMerkleTree();
+
+        string newBlockHash = CalculateBlockHash(prevBlockHash);
+
+        if (newBlockHash != BlockHash)
+        {
+            isValid = false;
+            errors?.Add($"Block #{BlockNumber}: hash không khớp (dữ liệu bị thay đổi)");
+        }
+        else if (PreviousBlockHash != prevBlockHash)
+        {
+            isValid = false;
+            errors?.Add($"Block #{BlockNumber}: previousHash không khớp (chuỗi bị phá vỡ)");
+        }
+
+        if (NextBlock != null)
+            return NextBlock.IsValidChain(newBlockHash, verbose, errors) && isValid;
+
+        return isValid;
     }
-    else
+
+    public List<int> GetTamperedTransactions()
     {
-        isValid = (PreviousBlockHash == prevBlockHash);
+        var tampered = new List<int>();
+        for (int i = 0; i < Transaction.Count; i++)
+        {
+            if (Transaction[i].CalculateTransactionHash() != Transaction[i].StoredHash)
+                tampered.Add(i);
+        }
+        return tampered;
     }
-
-    PrintVerificationMessage(verbose, isValid);
-
-    if (NextBlock != null)
-        return NextBlock.IsValidChain(newBlockHash, verbose);
-
-    return isValid; 
-}
 
     private void PrintVerificationMessage(bool verbose, bool isValid)
     {
@@ -114,4 +125,5 @@ public class Block : IBlock
             }
         }
     }
+
 }

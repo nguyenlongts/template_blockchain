@@ -1,0 +1,35 @@
+[
+  {
+    "Transaction": [
+      {
+        "MaSinhVien": "1",
+        "MaMonHoc": "2",
+        "Diem": 3.0,
+        "LanThi": 1,
+        "NgayLuu": "2026-04-24T14:04:35.7496678Z",
+        "StoredHash": "8ZopWkmVJzhNDI/OK/4tIWUX17IuDCoDN78u4uZesxo="
+      },
+      {
+        "MaSinhVien": "2",
+        "MaMonHoc": "3",
+        "Diem": 1.0,
+        "LanThi": 1,
+        "NgayLuu": "2026-04-24T14:04:38.0262617Z",
+        "StoredHash": "oj45o9WzRIEox/wDwQyybMRGxlFJg+HgBSOj21DsLZI="
+      },
+      {
+        "MaSinhVien": "3",
+        "MaMonHoc": "2",
+        "Diem": 10.0,
+        "LanThi": 1,
+        "NgayLuu": "2026-04-24T14:04:41.0773926Z",
+        "StoredHash": "/jJu31EE0zu9EvkTi8rMqObS3gmV+an2DuvgvLCLYQA="
+      }
+    ],
+    "BlockNumber": 0,
+    "CreatedDate": "2026-04-24T14:04:41.0777274Z",
+    "BlockHash": "IspTVBt/HNX+7/a57q9ct71oBxl8gYj/0D6Iofwjalw=",
+    "PreviousBlockHash": null,
+    "NextBlock": null
+  }
+]

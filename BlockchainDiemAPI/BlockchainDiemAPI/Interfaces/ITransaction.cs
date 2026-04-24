@@ -7,6 +7,7 @@
         double Diem { get; set; }
         int LanThi { get; set; }
         DateTime NgayLuu { get; set; }
+        string StoredHash { get; set; }
 
         string CalculateTransactionHash();
     }

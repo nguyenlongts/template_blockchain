@@ -52,10 +52,40 @@ namespace BlockchainDiemAPI.Controllers
         [HttpGet("verify")]
         public IActionResult Verify()
         {
-            bool ok = _svc.Verify();
-            return Ok(new { isValid = ok, message = ok ? "Hợp lệ" : "Blockchain bị thay đổi!" });
-        }
+            _svc.Verify(out var chainErrors);
+            var blocks = _svc.GetBlocks();
 
+            var blockResults = blocks.Select(block => {
+                var tamperedIdx = block.GetTamperedTransactions();
+                bool blockValid = tamperedIdx.Count == 0;
+
+                return new
+                {
+                    blockNumber = block.BlockNumber,
+                    isValid = blockValid,
+                    status = blockValid ? "✅ Hợp lệ" : "⚠️ Có transaction bị thay đổi",
+                    transactions = block.Transaction.Select((t, i) => new {
+                        index = i,
+                        maSinhVien = t.MaSinhVien,
+                        maMonHoc = t.MaMonHoc,
+                        diem = t.Diem,
+                        isValid = !tamperedIdx.Contains(i),
+                        status = tamperedIdx.Contains(i) ? "⚠️ Đã bị thay đổi" : "✅ Hợp lệ"
+                    })
+                };
+            }).ToList();
+
+            // ✅ chainValid phải tính cả 2 nguồn
+            bool chainValid = chainErrors.Count == 0 && blockResults.All(b => b.isValid);
+
+            return Ok(new
+            {
+                isValid = chainValid,
+                message = chainValid ? "Blockchain hợp lệ" : "Phát hiện dữ liệu bị thay đổi!",
+                details = chainErrors,
+                blocks = blockResults
+            });
+        }
         [HttpPost("save")]
         public IActionResult Save() { _svc.Save(); return Ok(new { message = "Đã lưu" }); }
     }

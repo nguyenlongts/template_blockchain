@@ -11,6 +11,8 @@ namespace BlockchainDiemAPI
         public double Diem { get; set; }
         public int LanThi { get; set; }
         public DateTime NgayLuu { get; set; }
+        public string StoredHash { get; set; }
+
         public Transaction()
         {
             
@@ -22,6 +24,8 @@ namespace BlockchainDiemAPI
             Diem = diem;
             LanThi = lanThi;
             NgayLuu = ngayLuu;
+            StoredHash = CalculateTransactionHash();
+
         }
         public string CalculateTransactionHash()
         {
