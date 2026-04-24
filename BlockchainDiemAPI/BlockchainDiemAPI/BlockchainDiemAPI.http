@@ -1,0 +1,6 @@
+@BlockchainDiemAPI_HostAddress = http://localhost:5160
+
+GET {{BlockchainDiemAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

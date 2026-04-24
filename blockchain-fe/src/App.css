@@ -1,0 +1,255 @@
+/* Layout */
+.app {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem;
+}
+
+/* Header */
+.app-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+}
+.app-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #111;
+}
+
+/* Tabs */
+.tabs {
+  display: flex;
+  gap: 4px;
+  background: #e5e7eb;
+  padding: 4px;
+  border-radius: 10px;
+  margin-bottom: 1.25rem;
+}
+.tab {
+  flex: 1;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 7px;
+  background: transparent;
+  color: #6b7280;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.15s;
+}
+.tab.active {
+  background: #fff;
+  color: #111;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+}
+
+/* Card */
+.card {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 1rem 1.25rem;
+  margin-bottom: 1rem;
+}
+.card-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+/* Form */
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+@media (max-width: 480px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+}
+label {
+  display: block;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #6b7280;
+  margin-bottom: 4px;
+}
+.input {
+  width: 100%;
+  padding: 7px 10px;
+  background: #f9fafb;
+  border: 1px solid #d1d5db;
+  border-radius: 7px;
+  color: #111;
+  outline: none;
+  transition: border-color 0.15s;
+}
+.input:focus {
+  border-color: #6366f1;
+  background: #fff;
+}
+
+/* Buttons */
+.btn {
+  padding: 7px 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  background: #fff;
+  color: #374151;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.15s;
+}
+.btn:hover {
+  background: #f3f4f6;
+}
+.btn-primary {
+  padding: 7px 18px;
+  border: 1px solid #6366f1;
+  border-radius: 8px;
+  background: #6366f1;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.15s;
+}
+.btn-primary:hover {
+  background: #4f46e5;
+}
+.btn-primary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Alert */
+.alert {
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 13px;
+  margin-top: 10px;
+}
+.alert-success {
+  background: #dcfce7;
+  color: #166534;
+}
+.alert-error {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+/* Block table */
+.block-header {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+.block-num {
+  font-weight: 700;
+  font-size: 13px;
+  color: #111;
+}
+.block-hash {
+  font-size: 11px;
+  color: #9ca3af;
+  font-family: monospace;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 260px;
+}
+
+.tx-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+.tx-table th {
+  text-align: left;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #6b7280;
+  padding: 6px 8px;
+  background: #f9fafb;
+  border-bottom: 1px solid #f0f0f0;
+}
+.tx-table td {
+  padding: 7px 8px;
+  border-bottom: 1px solid #f3f4f6;
+  color: #374151;
+}
+.tx-table tr:last-child td {
+  border-bottom: none;
+}
+.diem-badge {
+  display: inline-block;
+  padding: 2px 8px;
+
+  font-weight: 600;
+  font-size: 12px;
+}
+
+/* Pending list */
+.pending-row {
+  display: grid;
+  grid-template-columns: 120px 120px 60px 50px 1fr;
+  gap: 8px;
+  padding: 7px 0;
+  border-bottom: 1px solid #f3f4f6;
+  font-size: 13px;
+  align-items: center;
+}
+.pending-row:last-child {
+  border-bottom: none;
+}
+.pending-label {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #6b7280;
+  padding: 4px 0 8px;
+  border-bottom: 1px solid #e5e7eb;
+  margin-bottom: 4px;
+  display: grid;
+  grid-template-columns: 120px 120px 60px 50px 1fr;
+  gap: 8px;
+}
+
+/* Verify */
+.verify-result {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: 10px;
+}
+.verify-ok {
+  background: #dcfce7;
+  color: #166534;
+}
+.verify-fail {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+/* Empty / loading */
+.empty {
+  color: #9ca3af;
+  font-size: 13px;
+  text-align: center;
+  padding: 2rem 0;
+}

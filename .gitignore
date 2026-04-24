@@ -1,0 +1,15 @@
+# Node modules
+blockchain-fe/node_modules/
+blockchain-fe/.vite-temp/
+
+# Build output
+blockchain-fe/dist/
+
+# Visual Studio
+BlockchainDiemAPI/.vs/
+BlockchainDiemAPI/**/bin/
+BlockchainDiemAPI/**/obj/
+
+# Misc
+*.user
+.env
