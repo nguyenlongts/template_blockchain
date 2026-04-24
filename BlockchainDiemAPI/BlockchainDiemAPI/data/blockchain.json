@@ -6,30 +6,31 @@
         "MaMonHoc": "2",
         "Diem": 3.0,
         "LanThi": 1,
-        "NgayLuu": "2026-04-24T14:04:35.7496678Z",
-        "StoredHash": "8ZopWkmVJzhNDI/OK/4tIWUX17IuDCoDN78u4uZesxo="
+        "NgayLuu": "2026-04-24T14:13:51.8954198Z",
+        "StoredHash": "R/0fhxEFHI4y+uGVxoxXJg7gHRjcqadOa5aMCmX476g="
       },
       {
-        "MaSinhVien": "2",
-        "MaMonHoc": "3",
-        "Diem": 1.0,
+        "MaSinhVien": "4",
+        "MaMonHoc": "5",
+        "Diem": 6.0,
         "LanThi": 1,
-        "NgayLuu": "2026-04-24T14:04:38.0262617Z",
-        "StoredHash": "oj45o9WzRIEox/wDwQyybMRGxlFJg+HgBSOj21DsLZI="
+        "NgayLuu": "2026-04-24T14:13:55.0405084Z",
+        "StoredHash": "K/z1Jk4rkdWBlChMsCNt7l9OwUw+q8e3ixqpB04AzyA="
       },
       {
-        "MaSinhVien": "3",
-        "MaMonHoc": "2",
-        "Diem": 10.0,
+        "MaSinhVien": "7",
+        "MaMonHoc": "8",
+        "Diem": 9.0,
         "LanThi": 1,
-        "NgayLuu": "2026-04-24T14:04:41.0773926Z",
-        "StoredHash": "/jJu31EE0zu9EvkTi8rMqObS3gmV+an2DuvgvLCLYQA="
+        "NgayLuu": "2026-04-24T14:13:58.2247466Z",
+        "StoredHash": "/vO0kMYk95RzLCmmej3OV16B1P5OkFL3Ge0u9e+XmUo="
       }
     ],
     "BlockNumber": 0,
-    "CreatedDate": "2026-04-24T14:04:41.0777274Z",
-    "BlockHash": "IspTVBt/HNX+7/a57q9ct71oBxl8gYj/0D6Iofwjalw=",
+    "CreatedDate": "2026-04-24T14:13:58.2251232Z",
+    "BlockHash": "9ybVCtx0YIIw7oyX92kDQCmJNXuEyQKAo6E3HvT/fHc=",
     "PreviousBlockHash": null,
-    "NextBlock": null
+    "NextBlock": null,
+    "MerkleRoot": "C523D5056A22BB9FFD8D137CD8AEB0692FF84529DE1C039332268CD158FBA0A8"
   }
 ]

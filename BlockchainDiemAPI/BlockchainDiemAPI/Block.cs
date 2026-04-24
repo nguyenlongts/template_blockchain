@@ -21,6 +21,7 @@ public class Block : IBlock
     public string PreviousBlockHash { get; set; }
     public IBlock NextBlock { get; set; }
     private MerkleTree merkleTree = new MerkleTree();
+    public string MerkleRoot { get; set; }
 
     public Block(int blockNumber)
     {
@@ -43,7 +44,6 @@ public class Block : IBlock
         return Convert.ToBase64String(HashData.ComputeHashSha256(Encoding.UTF8.GetBytes(combined)));
     }
 
-    // Set the block hash
     public void SetBlockHash(IBlock parent)
     {
         if (parent != null)
@@ -74,6 +74,7 @@ public class Block : IBlock
         }
 
         merkleTree.BuildTree();
+        MerkleRoot = merkleTree.RootNode.ToString();
     }
 
     public bool IsValidChain(string prevBlockHash, bool verbose, List<string> errors = null)
