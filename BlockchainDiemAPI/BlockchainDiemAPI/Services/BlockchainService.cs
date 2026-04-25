@@ -1,18 +1,25 @@
-﻿namespace BlockchainDiemAPI.Services
+﻿using BlockchainDiemAPI.Cryptography;
+
+namespace BlockchainDiemAPI.Services
 {
     public class BlockchainService
     {
         private readonly BlockChain _blockchain;
         private readonly List<Transaction> _pending = new();
-        private const int TX_PER_BLOCK = 3;
+        private readonly DigitalSignature _ds;
+        private const int TX_PER_BLOCK = 4; // mỗi block tối đa 4 transaction
 
         public BlockchainService()
         {
             _blockchain = FileManager.LoadBlockchain();
+            _ds = new DigitalSignature();
+            _ds.LoadOrCreateKey(); // load key cũ, chỉ tạo mới lần đầu
         }
 
         public AddResult AddTransaction(Transaction txn)
         {
+            // Ký số transaction trước khi thêm vào pending
+            txn.Sign(_ds);
             _pending.Add(txn);
 
             if (_pending.Count >= TX_PER_BLOCK)
@@ -33,7 +40,7 @@
 
         public List<Transaction> GetPending() => _pending;
 
-        public bool Verify() => Verify(out _); 
+        public bool Verify() => Verify(out _);
 
         public bool Verify(out List<string> errors)
         {
@@ -43,7 +50,7 @@
         }
 
         public void Save() => FileManager.SaveBlockchain(_blockchain);
-    }
 
-    public record AddResult(bool BlockCreated, int PendingCount);
+        public record AddResult(bool BlockCreated, int PendingCount);
+    }
 }

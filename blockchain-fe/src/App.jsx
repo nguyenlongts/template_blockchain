@@ -7,7 +7,7 @@ import "./App.css";
 
 const TABS = [
   { id: "blocks", label: "Blocks" },
-  { id: "pending", label: "Chờ xử lý" },
+  { id: "pending", label: "Chờ lưu" },
   { id: "verify", label: "Xác minh" },
 ];
 
@@ -18,7 +18,9 @@ export default function App() {
   return (
     <div className="app">
       <div className="app-header">
-        <span className="app-title">Blockchain Điểm</span>
+        <span className="app-title">
+          Blockchain quản lý thông tin tốt nghiệp của sinh viên
+        </span>
       </div>
 
       <AddTransactionForm onAdded={() => setRefreshKey((k) => k + 1)} />

@@ -2,67 +2,107 @@
   {
     "Transaction": [
       {
-        "MaSinhVien": "abc",
-        "MaMonHoc": "1",
-        "Diem": 2.0,
-        "LanThi": 1,
-        "NgayLuu": "2026-04-25T00:15:28.427897Z",
-        "StoredHash": "aj5Fop6JivczT23Bekd524/2+tkyLGg0yb20k9s4v94="
+        "MaSinhVien": "sv1",
+        "HoTen": "a",
+        "NgayTotNghiep": "2026-04-29T00:00:00Z",
+        "DiemTongKet": 8.0,
+        "LoaiTotNghiep": "Giỏi",
+        "NganhHoc": "it",
+        "NgayLuu": "2026-04-25T00:46:29.356639Z",
+        "StoredHash": "13ulkDT2f32ec1BfAY9VenDfofOnG9Wk2MKOMovEk6w=",
+        "Signature": "PaNczuytPHcjCpdhGy968RqMhUFGl1/aJAyC1BYSdQxmg1ZDjelzdAGVMOmDoVqJvwQqpQ4W7WI4WJ/t2rMTCdoJxfm0OINryMAnVRM191GUUd4yKs1/xeUNs6omtxKDyhQhB4e4lH2dZL9/Fiy6OP+ZgUG46qmvqh9VnE4Q0oJrCA6VIejeaxhzS2eCLHYBBa6/R/OhKeh53NqwFsgqf2vfkaz7qTDIzQcEwwe5d3elQl07wIznyYg8CCHNzHDxhi+FH28M4XxojRWxCpJrV3+qfLvh3Y6DtoI8pN4LmiD4M8UX9PNsHSzYgH+FKlcBLdPNaEMEAQ60x+yPE1absQ=="
       },
       {
-        "MaSinhVien": "3",
-        "MaMonHoc": "4",
-        "Diem": 5.0,
-        "LanThi": 1,
-        "NgayLuu": "2026-04-25T00:15:31.138097Z",
-        "StoredHash": "FmAFgoAcECeePqmR7wiU9g1iJx5sBk5Y1UhsoHczE0E="
+        "MaSinhVien": "sv2",
+        "HoTen": "b",
+        "NgayTotNghiep": "2026-04-26T00:00:00Z",
+        "DiemTongKet": 8.3,
+        "LoaiTotNghiep": "Giỏi",
+        "NganhHoc": "it",
+        "NgayLuu": "2026-04-25T00:46:42.346133Z",
+        "StoredHash": "0LQFdEEdYrO7WiYNyO1s9pOvvthLYfEhvSuOzeQKbMc=",
+        "Signature": "d73ujaxghENkgE1uyb8DnSYMng9fmpKYkAou8PhGxetPtCx0DajBnN/wX6/CqUad6gipOYJPlc6ls4detvQ4gpbjDeabmSsWVP4vgRYTbNWedO5V+hozGuS4l4vPq/JAH203ryJrdINSE+tFYL5hZ9dNPKiTRfL2mbSVw8HrppM5ICd6Du0b7nJnyP4yMg5mksDv+XDWGHhqXI4MoiFM4feD4X0NrrKLTiFcFfheJeufJap/RgF9lb94Lsd5F/uDuHKopqImYhIrAAKr+watbGz/tHBbbTWNgj3FVARheaiiQMeBtGXoBRnud79tS1/yytsqdbVnOwMSquLCqIJB+Q=="
       },
       {
-        "MaSinhVien": "6",
-        "MaMonHoc": "7",
-        "Diem": 9.0,
-        "LanThi": 1,
-        "NgayLuu": "2026-04-25T00:15:34.39449Z",
-        "StoredHash": "nj+u9Cvs2+/pN3N37Th5r8Jfk9CRDKE039s24HpUNQ0="
+        "MaSinhVien": "sv3",
+        "HoTen": "3",
+        "NgayTotNghiep": "2026-04-26T00:00:00Z",
+        "DiemTongKet": 9.0,
+        "LoaiTotNghiep": "Xuất sắc",
+        "NganhHoc": "it",
+        "NgayLuu": "2026-04-25T00:47:00.841789Z",
+        "StoredHash": "qXnMoANp3fOeuIfOlSrLf2gvfirKfc3wFCQ3rjPhlKw=",
+        "Signature": "wlOtQRXTd2bFrceqKxNYGJsOhTZqCyS0BcoYPnDLwXPpF65aA0aMj6UK7Lo6IDfA3SLLkgw04u8jKRtX19CNoDcYhu+O9OMXvXtsZNuwDQt/hd5SZfkM8WyUkknW8wIC2DL1hdwIvO1uEPl9kZy3/fQ1FaIhhfzhaG0jWEWdW7iH8gnowlmV8v9zTHOKoaYmN/NcyQYkd6PbK0xJdHcmD+59vhgr0PqDzv0Iiw7hX+7h6woVaWsZJHH+v49tAGfuPtgTXVyVZcX7MWRvlQSlgTfHQr0q5pcX5elkDOIvnqqhWvOub4zADsbE31RhZK6JVYoz0vCJRS6PsBchWKMbAg=="
+      },
+      {
+        "MaSinhVien": "sv4",
+        "HoTen": "d",
+        "NgayTotNghiep": "2026-04-30T00:00:00Z",
+        "DiemTongKet": 5.0,
+        "LoaiTotNghiep": "Trung bình",
+        "NganhHoc": "it",
+        "NgayLuu": "2026-04-25T00:47:17.300868Z",
+        "StoredHash": "5QCEzFIWNBolXr0byMv9xnB4+68kuwgVc1d3h5yMHDY=",
+        "Signature": "CHoe0JuGfIO7GEA4aoofI48zIR+iSuxttp6R4AFCUQmeY3EK4Vp9egRNzXIS7xyLCi8j0qHjNGK9t/xCo5lDh1HBgrTohxMR3LJiL0d5gz3I8hIKwLH3Z+i/MlK7TAHOvmKYU6gm1NAFm1Bx13DG00EsSxfSTlNVnYZ55ihZ1ZTfJ/aOk5QI6fhUCvmShzA1B9X6v4nbZDBuaV0SQCMr8IPsiMNgm+50IGsWpW2CWORiDaS7EpsYsmhxZ/DIFmIt5wYsRw3NBK+iMojOFidWWke5tO04cAMKGNYfvxPQt4l923bV5JeMCqj3K97hqf6yMtjO7jGg3gtdG1WL2NHkSA=="
       }
     ],
     "BlockNumber": 0,
-    "CreatedDate": "2026-04-25T00:15:34.395091Z",
-    "BlockHash": "LFOkD8CqX5k2sfHZ93h0HR2Kq69JQpoeviYJrL4KtZc=",
+    "CreatedDate": "2026-04-25T00:47:17.304676Z",
+    "BlockHash": "c64XkH4dKIH8gltH71vsjajKuapVBg+B/qxtEQeidFA=",
     "PreviousBlockHash": null,
-    "MerkleRoot": "6A10F6D9EF2407C614895A4CB865B53B610ED439F2472AEC99E32EF8E4A6D5FF"
+    "MerkleRoot": "F5C81647312B8DA8A88ADC4D34512CF3181840C9E44E14AD6D204E70D2A38445"
   },
   {
     "Transaction": [
       {
-        "MaSinhVien": "d",
-        "MaMonHoc": "e",
-        "Diem": 3.0,
-        "LanThi": 1,
-        "NgayLuu": "2026-04-25T00:16:08.694814Z",
-        "StoredHash": "nT/2m2BufO/vppbQ9sJxCP7YAe5HnpeTjOviOi750Aw="
+        "MaSinhVien": "sv2",
+        "HoTen": "Nguyễn Văn A",
+        "NgayTotNghiep": "2026-04-30T00:00:00Z",
+        "DiemTongKet": 8.0,
+        "LoaiTotNghiep": "Giỏi",
+        "NganhHoc": "Công nghệ thông tin",
+        "NgayLuu": "2026-04-25T00:50:20.844685Z",
+        "StoredHash": "AUtNf35YTo7wgX3GtLndn4j40I2VMTbQx8LmFScRP/k=",
+        "Signature": "BswhZdwYd03XqHVOZNLgphkwT4fP2G/i21IU40jzKZftEz1WbM/sowWG4T5FEebTF4PYKOR6q5bBA1XJfX/NNfC0OuL5VB11btCof4iqfGrRBMXyjH2I83HO59bkh60uQL3R84wyRHFGIAhzah7h/68QvBDvt2OLb7027wOCD3TbqbzHRDweBl7NCi1R6b0ByGy1DNjJpO27VIRNje63NG8pzMlGx4dpMIg0UzFho8oyA+mfKUkId9mTz6os4+33gq6KNA1luuxkb/IG1dkdg+UDbB4oL+Tg/udHF75qJoZro/uC5aBm/GgPE6h3IBhuL5g/H6KzivedZzDtEa+veA=="
       },
       {
-        "MaSinhVien": "e",
-        "MaMonHoc": "4",
-        "Diem": 5.0,
-        "LanThi": 1,
-        "NgayLuu": "2026-04-25T00:16:14.286621Z",
-        "StoredHash": "1UrTntfFHbIr0fi2tjbRDczFICiqADRg/RXcjSq2FNY="
+        "MaSinhVien": "sv1",
+        "HoTen": "Nguyễn Văn B",
+        "NgayTotNghiep": "2026-04-30T00:00:00Z",
+        "DiemTongKet": 7.5,
+        "LoaiTotNghiep": "Khá",
+        "NganhHoc": "Trí tuệ nhân tạo",
+        "NgayLuu": "2026-04-25T00:50:54.667133Z",
+        "StoredHash": "byl6dQySJIzW+740MiWNBXqoLaabQ9VPxmA+d+tcPm4=",
+        "Signature": "oQgaLShvSaTgzUTzQEy63haBvGFsmCHyGhvQCKOfuLPPm4E0POSSbMnajhhHvfp7iRv7EMMXUITlTgVryGAkKnnA6BZk9hA7bSWDjEubYPh3aTaSW/pCEY4JLHbt3VGvYBllZ50AwCoCT88haS6gj1RpvBMW47VaBEhVMmTzHIbEXHQskFlfcXIM3wFk29QtfWZAHvxaON4QALS9EyUCOL42cEurEsk5QDHkNOO/jBS+xamWf3kzRdHmuAqPRSd6OudG4dMnxEt0J+E2ZchPRlZvBqq68dXFMWqbMwMRjuoQr+g+0zevLkmP6ZAxuba4aeevehkUcm5fzMVsvRr1Jg=="
       },
       {
-        "MaSinhVien": "g",
-        "MaMonHoc": "3",
-        "Diem": 3.0,
-        "LanThi": 1,
-        "NgayLuu": "2026-04-25T00:16:17.95086Z",
-        "StoredHash": "ws1ecqtH+pTO6upq/R5fn1qxFIl+yT44+8p3t/dIFvs="
+        "MaSinhVien": "sv3",
+        "HoTen": "Trần Văn C",
+        "NgayTotNghiep": "2026-03-31T00:00:00Z",
+        "DiemTongKet": 9.2,
+        "LoaiTotNghiep": "Xuất sắc",
+        "NganhHoc": "Khoa học máy tính",
+        "NgayLuu": "2026-04-25T00:51:23.906759Z",
+        "StoredHash": "0g+PK0uhS/DvBYgKwLlD3+J+7W3H6VCpe0IiqvB8fKM=",
+        "Signature": "V2POdoVoYMlE583/jCkUDW1ruHM2HPtXenjj+pOhbmdPAaqiMWegE3jKbPj/QtdHd9mw6GEQoLkfD8s3DQx3nIusIWnvGQvdO/b3g1qjgk2AXAQKNEnruMFrt7lpwy98+u/9p1uK1QBdFad5yvNGgiTHLqViXmViHRc23Qpl5umV9Ypz4dfqsREJVTl29yE4dG8xAuBVKsVbiac0n6nXgBfe3AFcELC8nCRDSU/ETTBm7hfWTwtpE/lGDy7Pk8Po1fh0KXCBZ/kxLWo/bYEIbYqOsfvaZAyQT4pqnB4U60UERWCvd4bjiGIqq+x+LbMCdQck/lJQab6txWHZiIgsKQ=="
+      },
+      {
+        "MaSinhVien": "sv4",
+        "HoTen": "Đặng Văn D",
+        "NgayTotNghiep": "2026-04-30T00:00:00Z",
+        "DiemTongKet": 8.6,
+        "LoaiTotNghiep": "Giỏi",
+        "NganhHoc": "Hệ thống thông tin",
+        "NgayLuu": "2026-04-25T00:51:56.080978Z",
+        "StoredHash": "kmWa84GSF+B7Nd7jPaW2Z8GpqO2EL+yaTD6CumhebAk=",
+        "Signature": "KUIYG14MUCLH5Gr35xrQdXWZLMrYhKoae+E8drj5CKR4+pEgXpN9YWW/noYgDY1/xKDuaB4e0/RgZLq+sm6Th+GmyKAoGK/O0nH4qKNXfNyx+H9TiQeNaDAPFCakKOlcdsq9cRJE6b2AC2RiIiC8YH7Rrwjvrj53Lzpc82ww8fmasD7hlv7MWYkoooRAuViOf0/YKlNzMMY4E9VjpozYt2SfRwhvY/DykkVHmIxdtN3Wy5fc2mam079SUwisj6DtycvsC9MsiA47LGXINfr1CTOVffAJuWNP/cxFdXywjnNpTQ94e2zHg5hJzlRcaqDDD9h+D0HhgUZdausvHBRzHg=="
       }
     ],
     "BlockNumber": 1,
-    "CreatedDate": "2026-04-25T00:16:17.951056Z",
-    "BlockHash": "YqHuh29pTR5sZQW3UZKhiH1jAPkAmkG3ry2R1UWCfXM=",
-    "PreviousBlockHash": "LFOkD8CqX5k2sfHZ93h0HR2Kq69JQpoeviYJrL4KtZc=",
-    "MerkleRoot": "58B7270547DD006570F615FEDE5BB8773007FDEB53DE6592DDA0112469A026A5"
+    "CreatedDate": "2026-04-25T00:51:56.084292Z",
+    "BlockHash": "S8MaNcta+PsfKjNb7i2fqhqqzUiYpEKFp3IXVlwVeCQ=",
+    "PreviousBlockHash": "c64XkH4dKIH8gltH71vsjajKuapVBg+B/qxtEQeidFA=",
+    "MerkleRoot": "7AD44F1B66943442ED1840C5ED66BF055F48EC8C288502C3F8FBE3F245B034D8"
   }
 ]
