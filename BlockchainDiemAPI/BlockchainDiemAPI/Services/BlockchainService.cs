@@ -7,18 +7,17 @@ namespace BlockchainDiemAPI.Services
         private readonly BlockChain _blockchain;
         private readonly List<Transaction> _pending = new();
         private readonly DigitalSignature _ds;
-        private const int TX_PER_BLOCK = 4; // mỗi block tối đa 4 transaction
+        private const int TX_PER_BLOCK = 4;
 
         public BlockchainService()
         {
             _blockchain = FileManager.LoadBlockchain();
             _ds = new DigitalSignature();
-            _ds.LoadOrCreateKey(); // load key cũ, chỉ tạo mới lần đầu
+            _ds.LoadOrCreateKey(); 
         }
 
         public AddResult AddTransaction(Transaction txn)
         {
-            // Ký số transaction trước khi thêm vào pending
             txn.Sign(_ds);
             _pending.Add(txn);
 

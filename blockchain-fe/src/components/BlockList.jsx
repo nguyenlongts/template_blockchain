@@ -161,7 +161,7 @@ export default function BlockList({ refresh }) {
                       }}
                     >
                       <span style={{ fontSize: 13, fontWeight: 500 }}>
-                        TX #{t.index} — {t.maSinhVien} · {t.hoTen}
+                        Transaction #{t.index + 1} — {t.maSinhVien} · {t.hoTen}
                       </span>
                       <button
                         className="btn"
@@ -186,7 +186,7 @@ export default function BlockList({ refresh }) {
                           <span style={{ color: "#1d4ed8" }}>{t.hash}</span>
                         </div>
                         <div style={{ marginTop: 4 }}>
-                          <span style={{ color: "#6b7280" }}>Chữ ký số: </span>
+                          <span style={{ color: "#6b7280" }}>Signature: </span>
                           <span style={{ color: "#7c3aed" }}>
                             {t.signature || "Chưa có chữ ký"}
                           </span>

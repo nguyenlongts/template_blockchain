@@ -142,7 +142,7 @@ export default function VerifyPanel() {
                           color: t.isValid ? "#15803d" : "#b91c1c",
                         }}
                       >
-                        {t.isValid ? "✅ Hợp lệ" : "⚠️ Đã bị thay đổi"}
+                        {t.isValid ? "Hợp lệ" : "Đã bị thay đổi"}
                       </td>
                     </tr>
                   ))}
