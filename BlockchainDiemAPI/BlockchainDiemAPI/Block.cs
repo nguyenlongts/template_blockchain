@@ -5,6 +5,7 @@ using BlockchainDiemAPI.Merkle;
 using System;
 using System.Collections.Generic;
 using System.Drawing.Drawing2D;
+using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 
@@ -80,8 +81,20 @@ public class Block : IBlock
     public bool IsValidChain(string prevBlockHash, bool verbose, List<string> errors = null)
     {
         bool isValid = true;
-        BuildMerkleTree();
 
+        // Verify Merkle root independently before checking block hash
+        var verifyTree = new MerkleTree();
+        foreach (var txn in Transaction)
+            verifyTree.AppendLeaf(MerkleHash.Create(txn.StoredHash));
+        verifyTree.BuildTree();
+
+        if (verifyTree.RootNode.ToString() != MerkleRoot)
+        {
+            isValid = false;
+            errors?.Add($"Block #{BlockNumber}: Merkle root không khớp (transaction bị thay đổi hoặc sao chép)");
+        }
+
+        BuildMerkleTree();
         string newBlockHash = CalculateBlockHash(prevBlockHash);
 
         if (newBlockHash != BlockHash)
@@ -104,12 +117,48 @@ public class Block : IBlock
     public List<int> GetTamperedTransactions()
     {
         var tampered = new List<int>();
+
+        // Check 1: each transaction's current data must match its own stored hash
         for (int i = 0; i < Transaction.Count; i++)
         {
             if (Transaction[i].CalculateTransactionHash() != Transaction[i].StoredHash)
                 tampered.Add(i);
         }
-        return tampered;
+
+        // Check 2: rebuild Merkle tree from StoredHash values and compare to the
+        // block's committed MerkleRoot. This catches copy-paste attacks where an
+        // attacker duplicates an entire transaction (including its StoredHash),
+        // which fools the per-field check above but changes the tree structure.
+        var verifyTree = new MerkleTree();
+        foreach (var txn in Transaction)
+            verifyTree.AppendLeaf(MerkleHash.Create(txn.StoredHash));
+        verifyTree.BuildTree();
+
+        if (verifyTree.RootNode.ToString() != MerkleRoot)
+        {
+            // Identify duplicated StoredHash values (signature of a copy-paste attack)
+            var seen = new Dictionary<string, int>();
+            for (int i = 0; i < Transaction.Count; i++)
+            {
+                var h = Transaction[i].StoredHash;
+                if (seen.ContainsKey(h))
+                {
+                    if (!tampered.Contains(seen[h])) tampered.Add(seen[h]);
+                    if (!tampered.Contains(i))        tampered.Add(i);
+                }
+                else
+                {
+                    seen[h] = i;
+                }
+            }
+
+            // No duplicates but root still mismatches (e.g. reordering) — flag all
+            if (tampered.Count == 0)
+                for (int i = 0; i < Transaction.Count; i++)
+                    tampered.Add(i);
+        }
+
+        return tampered.Distinct().OrderBy(x => x).ToList();
     }
 
     private void PrintVerificationMessage(bool verbose, bool isValid)
